@@ -1,0 +1,204 @@
+version: "2.0"     #rasa version
+
+stories:     #creating a stories. i.e conversation path of intent and domain
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: last path 1
+  steps:
+  - intent: convo_settle
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_furthermore
+
+- story: last path 2
+  steps:
+  - intent: convo_settle
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: ask more path
+  steps:
+  - intent: ask_more
+  - action: utter_more_reply
+
+- story: tata path
+  steps:
+  - intent: tata
+  - action: utter_tata
+
+- story: seminar loop path
+  steps:
+  - intent: seminar_loop
+  - action: utter_seminar_loop
+  - intent: sub_loop
+  - action: utter_sub_loop
+
+- story: presentation loop path   #creating a story name
+  steps:
+  - intent: presentation_loop  #intent name
+  - action: utter_presentation_loop  # domain name i.e response for the particular intent
+  - intent: sub_loop    #intent name which we need for continue the conversation for the particular question
+  - action: utter_sub_loop  #response for the particular intent
+
+- story: report path
+  steps:
+  - intent: report_loop
+  - action: utter_report_loop
+  - intent: sub_loop
+  - action: utter_sub_loop
+
+
+
+
+
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+
+
+#- story: Introduction_path
+#  steps:
+#  - intent: Introduction
+#  - action: utter_intro
+
+#- story: schedule form
+#  steps:
+#  - intent: schedule
+#  - action: utter_ask_scheduledata
+#  - intent: schedule_email
+#    entities:
+#    - name: "guhan1597@gmail.com"
+#  - slot_was_set:
+#     - name: "guhan1597@gmail.com"
+#  - action: utter_ask_number
+#  - intent: schedule_number
+#    entities:
+#    - number: "563442"
+#  - slot_was_set:
+#     - number: "563442"
+#s  - action: utter_details_thanks
+
+
+- story: appointment_path
+  steps:
+  - intent: presentation_appointment_button
+  - action: utter_presentation_appointment
+
+- story: change_path
+  steps:
+  - intent: change
+  - action: utter_change_reply
+
+#- story: know more_path
+#  steps:
+#  - intent: other_basic_information
+  #- action: utter_other_basic_information_reply
+
+- story: presentation_template_path
+  steps:
+  - intent: presentation_template
+  - action: utter_presentation_template
+
+- story: enrollment_course_path  #creating a story name
+  steps:
+  - intent: enrollment_full     #intent name
+  - action: utter_enrollment_full #domain name. i.e response for the enrollment_full intent.
+
+- story: deregistration_path   #creating a story name
+  steps:
+  - intent: topic_deregistration  #intent name
+  - action: utter_deregistration  #domain name. i.e response for the topic_deregistration intent.
+
+- story: attendance_path
+  steps:
+  - intent: attendance
+  - action: utter_attendance
+  - action: utter_attendance_one
+
+- story: ill_presentation_path
+  steps:
+  - intent: ill_presentation
+  - action: utter_ill
+
+- story: switching_topic_path
+  steps:
+  - intent: switch_topic
+  - action: utter_switching_topic
+
+- story: choosing_own_topic_path
+  steps:
+  - intent: own_topic
+  - action: utter_choosing_own_topic
+  - intent: own_topic_proposal
+  - action: utter_own_topic_proposal
+
+- story: information_topic_path
+  steps:
+  - intent: topic_information
+  - action: utter_information_for_topic
+  - action: utter_information_for_topic_one
+
+- story : report_query_look_path
+  steps:
+  - intent: report_query_look
+  - action: utter_report_look
+
+- story: ptr_report_making_path
+  steps:
+  - intent: ptr_report_making
+  - action: utter_ptr_report_making
+
+- story: report_query_length_path
+  steps:
+  - intent: report_query_length
+  - action: utter_report_query_length
+
+- story: report_query_title_page_path
+  steps:
+  - intent: report_query_title_page
+  - action: utter_report_query_title_page
+
+- story: report_incomplete_path
+  steps:
+  - intent: report_incomplete
+  - action: utter_report_incomplete
+
+- story: report_submit_path
+  steps:
+  - intent: report_submit
+  - action: utter_report_submit
+
+- story: know_more_path
+  steps:
+  - intent: know_more
+  - action: utter_know_more
+
+- story: submission_deadline_path
+  steps:
+  - intent: submission_deadline
+  - action: utter_submission_deadline
+
+- story: seminar_end_path
+  steps:
+  - intent: seminar_end
+  - action: utter_seminar_end
+
+- story: seminar_participation_path
+  steps:
+  - intent: seminar_participation
+  - action: utter_seminar_participation
+  - action: utter_seminar_participation_one
+
+- story: hauptseminar_repeat_path
+  steps:
+  - intent: hauptseminar_repeat
+  - action: utter_hauptseminar_repeat

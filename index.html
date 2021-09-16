@@ -1,0 +1,47 @@
+<html>
+    <body>
+      <body background = bbg.png>  
+      <img src="oie_trans.gif" width = "200";>
+
+      <style>
+      .rw-conversation-container .rw-header{background-color: #1A5276;}
+      .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #707B7C;}
+      .rw-conversation-container .rw-messages-container .rw-message .rw-response{background-color: #CACFD2;}
+      .rw-conversation-container .rw-messages-container .rw-replies .rw-reply{display: block;}
+      .rw-conversation-container .rw-messages-container .rw-replies .rw-response{display: inline-block;}
+      .rw-conversation-container .rw-messages-container .rw-message{font-size: 14px;}
+      .rw-conversation-container .rw-messages-container .rw-message{
+             margin: 10px;
+             display:flex;
+             font-family: Roboto,serif
+      }
+      .rw-launcher{background-color: #234E70;}
+      </style>
+      <script>!(function () {
+  let e = document.createElement("script"),
+    t = document.head || document.getElementsByTagName("head")[0];
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"),
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        {
+          customData: { language: "en" },
+          socketUrl: "http://localhost:5005",
+          socketpath: "/socket.io/",
+          title:'Hawisa',
+          subtitle:'Welcome to TU Chemnitz',
+          profileAvatar:'hawisalogo.jpg',
+          inputTextFieldHint: 'Type a message…',
+          connectingText: 'Waiting for server…',
+          params: {"storage": "session"}
+          // add other props here
+        },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+})();
+</script>
+    </body>
+</html>

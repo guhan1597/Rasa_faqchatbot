@@ -1,0 +1,418 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - h
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: tata
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - goodbye
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yup
+    - yeah
+    - ya
+    - yep
+
+
+- intent: convo_settle
+  examples: |
+    - okay
+    - ok
+    - k
+    - thanks
+    - thank
+    - thank you
+    - tq
+    - txs
+    - tnq
+    - i will do that
+    - sure
+    - its of great help
+    - thanks alot
+    - thanks for the info
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - perfect
+    - great
+    - amazing
+    - wonderful
+    - super
+    - good
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - it dint help
+    - that did not help me
+    - irrelevant
+    - i dont think its helping me
+
+- intent: seminar_loop
+  examples: |
+    - seminar
+    - s
+    - seminar loop
+    - seminar area
+
+- intent: presentation_loop
+  examples: |
+    - presentatiom
+    - p
+    - study
+    - success
+
+- intent: report_loop
+  examples: |
+    - report
+    - r
+    - material
+    - paper
+
+- intent: sub_loop
+  examples: |
+    - enrollment
+    - topic
+    - hauptseminar
+    - attendance
+    - deadlines
+    - other info
+    - template
+    - submission
+    - appointment
+
+
+
+
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+
+- intent: presentation_appointment_button    #creating an intent name
+  examples: |        #creating some samples for the nlu data
+    - presentation appointment
+    - appointment presentation
+    - information regarding the presentation appointment
+    - information about the presentation appointment
+    - book an appointment
+
+
+
+- intent: ask_more
+  examples: |
+    - ask more
+    - ask
+    - asking
+    - asked
+    - ask again
+    - asked to
+    - anything else
+
+
+
+- intent: schedule
+  examples: |
+    - Schedule
+    - schedule me
+    - schedule appointment
+    - appointment schedule
+
+
+- intent: change
+  examples: |
+    - can i change the appointment date and time?
+    - how can i change the appointment date?
+    - how can i change the appointment timing?
+
+
+- intent: presentation_template
+  examples: |
+    - can i have the template for presentation?
+    - show me the template for ppt
+    - where can i get the template for ppt?
+    - show me sample template for presentation
+    - how does the ppt look like
+
+- intent: enrollment_full      #creating an intent name.
+  examples: |                 #creating some samples for the nlu data.
+    - how can i enroll if the participation to the course is full?  
+    - whether registration is possible to course if seats are full?
+    - how can i still register to the course if no slots are available
+    - whether i can register to the course if participation is full?
+    - how can i be part of the course if participation is full
+    - what are the ways to enroll if the participation is full
+    - how to enroll to the course if the seats are full
+    - what can i do to participate if the course is full
+    - i would like to enroll in course but seats are already full
+    - tell me the procedure to enroll in course if seats are filled
+    - steps to enroll in lecture
+
+- intent: topic_deregistration #creating an intent name.
+  examples: |                 #creating some samples for the nlu data.
+    - how can i deregister for topic
+    - deregister for the topic
+    - whom should i request for deregistration?
+    - am i allowed to deregister from my topic?
+    - i would like to deregister for the topic
+    - please deregister my topic
+    - i need to deregister
+    - ways to deregister for topic
+    - whom can i contact for my deregistration
+    - help me with my deregistration
+
+- intent: attendance
+  examples: |
+    - whether i can miss lessons
+    - lessons i can allowed to the most
+    - whether attendance compulsory for all the lessons
+    - can i attend the lesson in the same week eventhough missing previous lessons
+    - what should i do if i cannot participate in all the lessons
+    - can i proceed with other lessons by not attending previous lessons
+    - what are the consequences if i could not take part in lessons regularly
+    - tell me the importance of attendance
+
+- intent: ill_presentation
+  examples: |
+    - what should i do if i get ill on my presentation day
+    - can i get another appointment for presentation if i get ill
+    - will i get alternate schedule for presentation if i get ill on the given day
+    - when should i inform if i could not present on given day due to health issues
+    - what can i do if i have health issues on presentation day
+    - i am not well on my presentation day
+    - what if i get sick on the day of my presentation
+    - i could not attend my presentation due to my illness
+    - what is the procedure to inform leave on my presentation day
+    - should i submit medical certificate if am not attending my presentation
+    - To whom should i inform if i fall sick on my presentation day
+
+- intent: switch_topic
+  examples: |
+    - can i switch the topic during registration?
+    - how can i switch my topic?
+    - whether i can switch my topic after registration time?
+    - change my topic
+    - please tell me the possibility of switching the topic after registration time
+    - i missed to change my topic during registration time
+    - am i allowed to change topic if registration time is over
+    - i forgot to switch topic before registration time
+    - explain the procedure to switch my topic
+    - may i be able to change my topic after registration time
+    - i want to update my topic
+
+- intent: own_topic
+  examples: |
+    - can i create my own topic?
+    - am interested in some specifc scientific topics
+    - what should i do to proceed with my own topic
+    - how can i choose my own topic?
+    - what is essential to get approval for my own topic
+    - choose my own topic
+    - how can i create my own topic with the scientific questions
+    - may i know the possibility to choose my own topic
+    - what is the procedure to choose own topic
+
+- intent: own_topic_proposal
+  examples: |
+    - what should the prposal contain
+    - content of the proposal
+    - what can be explained in proposal of one page
+    - which information about the topic should be contained in proposal
+    - what should be there in proposal
+    - what is a proposal called
+    - tell me about the proposal
+    - importance of proposal
+    - should i write the problems i solve in my proposal
+    - may i include my contributions in the proposal
+
+
+- intent: topic_information
+  examples: |
+    - where can i get information regarding my topic?
+    - how can i get more information on my topic?
+    - can i check with my supervisor for topic information?
+    - any trusted website for getting information on given topic
+    - where can i find the literature survey
+    - help me with the literature survey on my topic
+    - to whom can i check about literature
+    - please provide website information on literature
+    - can i access library for literature
+
+- intent: report_query_look
+  examples: |
+    - how does a good report look like
+    - show me a sample of some good report
+    - show me a structure of good report
+    - example of good report
+    - model of a good report
+    - send me sample of good report
+    - can i have a sample report
+    - may i see a sample copy of report
+    - where can i find the sample report
+    - i need to know how the report should be
+
+- intent: ptr_report_making
+  examples: |
+    - points to remember while writing a report
+    - important things to be noted in a report
+    - do's and dont's in a report writing
+    - checklist for report making
+    - tips to a better report writing
+    - instructions for report writing
+    - things to keep in mind before starting the report
+    - how should i put my references
+    - should i make report in own words
+    - table of contents necessary for report
+    - list of figures and numbering of figures essential in a report
+    - should i include citations in my report
+    - what can be included in content of report
+
+- intent: report_query_length
+  examples: |
+    - how long my report should be
+    - how many pages should my report contain
+    - total number of pages i am allowed to have in my report
+    - maximum number of pages in a report
+    - what is the minimum number of pages in a report
+    - how many pages can i have in my main content of the report
+    - should i include page counting for table of contents and title page
+    - can i count the page with list of figures in considering length of my report
+    - should i include reference page for total number of allowed pages
+    - what is the length of my report
+
+- intent: report_query_title_page
+  examples: |
+    - what information should be placed on the title page
+    - what are all the things should be there in title page?
+    - what should i have in first page of my report?
+    - tell me the first page information in a project final report
+    - my title page in report
+    - which details should i included in title page of my report
+    - What information should i keep on my report title page
+    - how the title page look like
+    - steps to make my title page
+    - should i include supervisor name in title page
+    - can i put author name in title page
+    - front page of the report
+
+- intent: report_incomplete
+  examples: |
+    - Can i just do the report if my presentation is already done
+    - can i write report with the same topic i presented in last semester
+    - what can i do if the report is missing but the presentation was done
+    - may i only do report work if my presentation is already completed
+    - do i need to register again with the topic if the report is missing
+    - my report is missing
+    - i already did my presentation in last semester and missed my report
+    - what am i supposed to do if i missed my report
+    - whether it is enough to do only report work if presentation is already finished
+    - my presentation is completed but report is missing
+
+- intent: report_submit
+  examples: |
+    - format for report submission
+    - how to i submit my report
+    - what is the procedure to submit my project report
+    - where should i submit my report
+    - To whom can i send the report
+    - which file format should be followed on the report
+    - How can i rename my report file
+    - In which way can i save my report file
+    - Whether word file format is accepted for the report submission
+    - Do you accept latex file formats in report
+    - Points to take care when submitting the report
+    - how to submit my report
+
+- intent: know_more
+  examples: |
+    - know more
+    - rules to follow
+    - may i know more on this
+    - explain me ways to upload report
+    - help me more with this
+
+- intent: submission_deadline
+  examples: |
+    - where can i find the deadlines for submissions?
+    - i need an information regarding deadlines for submission
+    - can i find the important points in opal course
+    - can i find the deadlines in opal course
+    - may i know the deadlines for my submission
+    - i need to know the deadlines
+    - when is the deadline for submission
+    - when is the last date of submissions
+    - may i know the least possible date of submission
+
+- intent: seminar_end
+  examples: |
+    - end the seminar during the semester
+    - can i cancel the seminar registration
+    - know the possibility to discontinue with the seminar
+    - what can i do to end the seminar
+    - what will be the consequences if i discontinue with the seminar
+    - Will i be marked fail if i end the seminar during semester
+    - stop my participation in the seminar
+    - i would not like to participate in this seminar
+    - can i withdraw myself from seminar
+    - which grade will i get for ending the seminar
+
+- intent: seminar_participation
+  examples: |
+    - can i take part at seminar during my internship
+    - may i take part in seminar in parallel with internship?
+    - am i allowed to attend the seminar if am currently doing my internship?
+    - will there be any exception on my seminar if am doing my internship
+    - can i register to seminar if my internship is ongoing
+    - can i do both seminar and internship together
+    - what is the procedure if am interested to register in seminar during my internship
+    - i would like to participate in seminar during my internship
+    - i could not take part with my assigned appointment for seminar
+
+- intent: hauptseminar_repeat
+  examples: |
+    - i wish to repeat my hauptseminar
+    - Am unsatisfied with my hauptseminar results
+    - know the possibility to retake the hauptseminar if am not satisfied with my score
+    - what can i do to repeat the hauptseminar due to unsatisfied results
+    - Can i repeat hauptseminar if i fail with mark 5
+    - what can i do if i am not satisfied with my hauptseminar results
+    - can i register again for the hauptseminar considering my marks
+    - To achieve better mark can i redo the hauptseminar
+    - may i repeat my hauptseminar to improve my mark
+    - i passed hauptseminar but not satisfied with the results

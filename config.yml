@@ -1,0 +1,28 @@
+---
+language: en  #language module. en refers the english model
+pipeline:    # creating a pipeline for intent classifications and entity extraction
+  - name: "SpacyNLP" # creating a spacy model
+    model: "en_core_web_md" #english language module
+  - name: "SpacyTokenizer"  #tokenization
+  - name: "SpacyFeaturizer" #featurization
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer #vectorization
+    analyzer: char_wb
+    min_ngram: 1  # setting the ngram values
+    max_ngram: 4
+  - name: DIETClassifier #creating the DIET model
+    epochs: 100
+  - name: EntitySynonymMapper #entity mapper
+  - name: ResponseSelector
+    epochs: 100
+
+
+policies: #Creating a policy
+  - name: RulePolicy  #setting rule policy
+  - name: MemoizationPolicy  #setting MemoizationPolicy
+    max_history: 3   #setting max threshold value
+  - name: TEDPolicy  #setting TED policy
+    max_history: 5   #maximum threshold value
+    epochs: 100
+    constrain_similarities: true
+    model_confidence: cosine
